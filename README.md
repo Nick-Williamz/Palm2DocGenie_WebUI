@@ -58,6 +58,24 @@ Easy to navigate, our user interface ensures that you focus on generating conten
 - Python (PaLM models)
 - Flask (Python web framework)
 
+
+## Update: Optimizing the `find_best_passage` Function
+
+I've have improved the efficiency of the `find_best_passage` function by using matrix operations instead of iterating through the embeddings. This update allows the function to run faster, especially when dealing with a large number of documents.
+
+Here's a summary of the changes:
+
+1. **Stacking document embeddings into a matrix**: Instead of calculating the dot product between the query embedding and each document embedding using a list comprehension, we stack all document embeddings into a matrix called `embeddings_matrix`. This matrix has a shape of (n, 512), where n is the number of documents.
+
+2. **Matrix multiplication for dot products**: We use the `np.matmul()` function to perform matrix multiplication between the `embeddings_matrix` and the `query_embedding`. This operation calculates the dot product between the query embedding and each document embedding in a single step, which is more efficient than iterating through the embeddings.
+
+3. **Finding the highest cosine similarity**: The result of the matrix multiplication is an array called `dot_products`, which contains the cosine similarity between the query and each passage in the document. We then find the index of the passage with the highest cosine similarity using `np.argmax()`.
+
+4. **Returning the best passage**: Finally, we return the passage with the highest cosine similarity to the query using the found index.
+
+By using matrix operations instead of iterating through the embeddings, the updated function can potentially run faster. This is because matrix operations are optimized in NumPy and can take advantage of low-level optimizations and hardware acceleration.
+
+
 ## Getting Started
 
 To get started with the Generative Markdown Genie app, follow these steps:
