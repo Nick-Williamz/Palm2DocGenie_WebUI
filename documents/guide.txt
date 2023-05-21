@@ -1,0 +1,123 @@
+Generative AI for Developers
+
+Large Language Models (LLMs) are a powerful, versatile type of machine learning model that enables computers to comprehend and generate natural language better than ever. They can be used to build all sorts of applications, from chat bots to virtual assistants to translation apps and much more. Plus, you don't have to be an AI expert or even write code to use them. All it takes are a few sentences or “prompts” to get started designing your own custom LLM app.
+
+Further reading
+To learn more about the models that power the PaLM API, see the models section.
+To learn how to use LLMs safely and responsibly, see the safety settings and safety guidance documentation.
+
+
+Models
+
+bookmark_border
+The PaLM API is based on Google’s next generation model, PaLM 2, which excels at a variety of capabilities. PaLM 2 has been optimized for ease of use on key developer use cases and the ability to follow instructions with precision and nuance. It has variations that are trained for text and chat generation as well as text embeddings. This guide provides information about each variation to help you decide which is the best fit for your use case.
+
+Intended use
+This model is intended to be used for a wide variety of natural language processing (NLP) applications such as chat bots, text summarization, and question and answer. The embedding service allows additional NLP use cases such as document search. It is only available to use through the PaLM API or the MakerSuite web app. Your use of PaLM API is also subject to the Generative AI Prohibited Use Policy and the Additional terms of service.
+
+Limitations
+Large language models are powerful tools, but they are not without their limitations. Their versatility and applicability can sometimes lead to unexpected outputs, such as outputs that are inaccurate, biased, or offensive. Post-processing, and rigorous manual evaluation are essential to limit the risk of harm from such outputs. See the safety guidance for additional safe use suggestions.
+
+Model
+This section provides more specific details about the model and each model variation.
+
+Model attributes
+The table below describes the attributes of the PaLM 2 model which are common to all the model variations.
+
+Attribute	Description
+Training data	PaLM 2's knowledge cutoff date is mid-2021. Knowledge about events past that date will be limited.
+Supported language	English
+Configurable model parameters	
+Top p
+Top k
+Temperature
+Stop sequence
+Max output length
+Number of response candidates
+See the model parameters section of the Intro to LLMs guide for information about each of these parameters.
+
+Model variations
+The PaLM API offers different models optimized for specific use cases. The following table describes attributes of each.
+
+Variation	Attribute	Description
+text-bison-001	Model last updated	May 2023
+Model size	Bison
+Model capabilities	
+Generates text.
+Optimized for language tasks such as:
+Code generation
+Text generation
+Text editing
+Problem solving
+Recommendations generation
+Information extraction
+Data extraction or generation
+AI agent
+Can handle zero, one, and few-shot tasks.
+Model safety	Adjustable safety settings for 6 dimensions of harm available to developers. See the safety settings topic for details.
+Rate limit during preview	30 requests per minute
+chat-bison-001	Model last updated	May 2023
+Model size	Bison
+Model capabilities	
+Generates text in a conversational format.
+Optimized for dialog language tasks such as implementation of chat bots or AI agents.
+Can handle zero, one, and few-shot tasks.
+Model safety	No adjustable safety settings.
+Rate limit during preview	30 requests per minute
+embedding-gecko-001	Model last updated	May 2023
+Model size	Gecko
+Model capabilities	
+Generates text embeddings for the input text.
+Optimized for creating embeddings for text of up to 1024 tokens.
+Model safety	No adjustable safety settings.
+Rate limit during preview	300 requests per minute
+See the prompt gallery and the examples to see the capabilities of these model variations in action.
+
+Model sizes
+The model sizes are described by an animal name. The following table shows the available sizes and what they mean relative to each other.
+
+Model size	Description	Services
+Bison	PaLM API's most capable model size.	
+text
+chat
+Gecko	PaLM API's smallest, most efficient model size.	
+embeddings
+Model metadata
+Use the ModelService API to get additional metadata about the latest models such as input and output token limits. The following table displays the metadata for the text-bison-001 model.
+
+Note: For the PaLM 2 model, token is equivalent to about 4 characters. 100 tokens are about 60-80 English words.
+Attribute	Value
+Display Name	Text Bison
+Name	models/text-bison-001
+Description	Model targeted for text generation
+Input token limit	8196
+Output token limit	1024
+Supported generation methods	generateText
+Temperature	0.7
+top_p	0.95
+top_k	40
+
+
+Get an API key
+
+bookmark_border
+To use the API, you need an API key. Once you're through the waitlist you can create a key with one click in MakerSuite.
+
+Get an API key
+Note: Remember to use your API keys securely. Check out this support article to learn best practices.
+Verify your API key with curl command
+You can use a curl command to verify your setup. You can pass the API key either in the URL:
+
+
+PALM_KEY="YOUR KEY HERE"
+curl -H 'Content-Type: application/json' \
+     -d '{"prompt": {text: "Give me five subcategories of jazz"} }' \
+     "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=${PALM_KEY}"
+Or in the x-goog-api-key header:
+
+
+PALM_KEY="YOUR KEY HERE"
+curl -H 'Content-Type: application/json' \
+     -H "x-goog-api-key: ${PALM_KEY}" \
+     -d '{"prompt": {text: "Give me five subcategories of jazz"} }' \
+     "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText"

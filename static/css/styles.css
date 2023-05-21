@@ -1,0 +1,152 @@
+body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #383737;
+    color: whitesmoke;
+}
+
+
+.container-fluid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    flex: 0.5 1 30px;
+    height: 100%;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar-footer {
+    text-align: center;
+}
+
+.sidebar-content {
+    flex: 1 1 auto;
+    text-align: center;
+}
+.sidebar-content p{
+text-align: left;
+}
+
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
+    color: #fff;
+    border: 1px solid lightgray;
+
+    padding: 1rem;
+    position: relative;
+    border-radius: 5px;
+    flex: 2;
+    height: 550px;
+}
+
+.document-view {
+    background-color: #252525;
+    border-radius: 5px;
+    padding: 1rem;
+    flex: 0 0 250px;
+    border: 1px solid lightgray;
+
+    height: 550px;
+    margin-right: 30px;
+
+}
+
+.mac-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+.mac-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff5f56;
+}
+
+.yellow {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: #27c93f;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    width: 100%;
+    max-width: calc(100% - 20px);
+    margin-top: 1rem;
+}
+
+.chat-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-input {
+    margin-top: auto;
+}
+
+.thicky {
+    border: 2px solid #ccc;
+    margin: 1rem 0;
+}
+#output {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    display: none;
+    white-space: pre-wrap;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: black; /* Dark gray/blue */
+    color: whitesmoke; /* Light beige */
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    width: 100%;
+    height: auto;
+}
+.text-center {
+    margin-top: 10px;
+}
+
+.d-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.title {
+    margin-top: 10px;
+}
