@@ -76,7 +76,7 @@ Here's a summary of the changes:
 By using matrix operations instead of iterating through the embeddings, the updated function can potentially run faster. This is because matrix operations are optimized in NumPy and can take advantage of low-level optimizations and hardware acceleration.
 
 ## Visualization of Update Efficiency
-![Image showing the improvments made with update](Palm2DocGenie_WebUI/static/img/optimization_visual.png)
+![Image showing the improvments made with update](/static/img/optimization_visual.png)
 
 
 
