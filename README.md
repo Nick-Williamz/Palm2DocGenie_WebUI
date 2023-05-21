@@ -59,7 +59,7 @@ Easy to navigate, our user interface ensures that you focus on generating conten
 - Flask (Python web framework)
 
 
-## Update: Optimizing the `find_best_passage` Function
+## ⚡ Update: Optimizing the `find_best_passage` Function
 
 I've have improved the efficiency of the `find_best_passage` function by using matrix operations instead of iterating through the embeddings. This update allows the function to run faster, especially when dealing with a large number of documents.
 
