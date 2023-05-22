@@ -2,7 +2,7 @@
 
 Generative AI Document Genie is a Flask application built on top of Google's new PaLM 2 generative AI API. Simply upload your documents you wish to interact with to the `/documents` directory and you're ready to rock! The conversations are stored in `conversation.txt`. To clear the `conversation.txt` file, simply tap the clear button on the front-end UI. If you've added new documents to the `/documents` folder, be sure to refresh your browser page to see the updated files that have been uploaded. 
 
-![Image showing working application running in browser](/staic/img/PaLM2_Doc_Genie.png)
+![Image showing working application running in browser](/static/img/PaLM2_Doc_Genie.png)
 
 :rocket: In its current version, the application harnesses the power of the Embedding API and the Generate Text functions which work together to let you upload documents and interact with them via one of Google's Generative Text models. Note that running this application requires access to a Google Generative PaLM 2 API Key, which currently has a waitlist. (Link in Step 1 below)
 
