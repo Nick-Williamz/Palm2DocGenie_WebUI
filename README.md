@@ -68,6 +68,8 @@ I've recently updated the embedding functionality in our application from using 
 
 4. I've added a Cosign similarity value for each of the queries generated on the front end at the end of the text.
 
+![Image showign new feature added to chat window](/static/img/cosign_sims.png)
+
 ## Getting Started
 
 To get started with the Generative Markdown Genie app, follow these steps:
