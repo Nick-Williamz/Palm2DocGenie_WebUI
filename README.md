@@ -101,7 +101,7 @@ python webui_app.py
 1. Load your documents into the /documents folder (currently only accepting .txt files)
 2. Once you've loaded the application and navigated to `127.0.0.1:5000` in the browser, you'll see the documents you've added to /documents in the Document View:
 
-![Image showing document view during runtime])(static/img/doc_view.png)
+![Image showing document view during runtime](static/img/doc_view.png)
 
 3. Enter a query into the "Enter a Questions about your Document" field.
 4. Click the "Submit" button to generate the output based on your query.
