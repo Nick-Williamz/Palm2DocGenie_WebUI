@@ -56,7 +56,7 @@ Easy to navigate, our user interface ensures that you focus on generating conten
 - Flask (Python web framework)
 
 
-## ⚡ Update (5/21/23) Improved Document Search and Output via ChromaDB
+## 🆕 Update (5/21/23) Improved Document Search and Output via ChromaDB 
 
 I've recently updated the embedding functionality in our application from using numpy to ChromaDB. This change has resulted in significant improvements in both query time and response quality. The following are the key benefits of this update:
 
@@ -97,22 +97,32 @@ python webui_app.py
 4. Open your web browser and navigate to http://localhost:5000 to access the application.
 
 ## Usage
+
+### Pregame
+
+- Load your documents into the /documents folder (currently only accepting .txt files)
+- Once you've loaded the application and navigated to `127.0.0.1:5000` in the browser, you'll see the documents you've added to /documents in the Document View
+
 1. Enter a query into the "Enter a Questions about your Document" field.
-2. Click the "Submit" button to generate a Markdown section based on the provided topic.
-3. Use the "Files Loaded" section to manage the documents that can assist in content generation.
-
-   - To add a document, click the "Add File" button and select the desired file from your device.
-   - To remove a document, click the "Remove" button next to the corresponding file in the list.
-   - The loaded documents will be used to enhance the content generation process.
-
-4. Use the "Clear" button to clear the generated content and start fresh.
+2. Click the "Submit" button to generate the output based on your query.
+3. Once output has been generated, if not already created, the converstaion.txt is created and the file will contain each of the queries and responses generated.
+4. To clear conversations.txt simply tap the clear button in the browser!
 
 ## Customization
-You can customize the application by modifying the following files:
+To customize the application, you can modify the following sections of the code:
 
-- `templates/index.html`: HTML template for the application interface.
-- `static/main.js`: JavaScript file for handling client-side functionality.
-- `app.py`: Flask application file for server-side functionality and API endpoints.
+1. **Templates and styling**: Modify the `index.html` file located in the `templates` folder to change the layout, design, and styling of the web application. You can also update the CSS styles in the `styles.css` file located in the `static/css` folder.
+
+2. **JavaScript**: Update the `main.js` file located in the `static` folder to modify the client-side JavaScript code, such as event handling, form submission, and AJAX requests.
+
+3. **Flask routes**: In the `main_routes.py` file, you can update or add new routes to handle different requests from the client-side. You can also modify the existing route functions to change the behavior of the application.
+
+4. **Text generation**: Modify the `text_generator.py` file to change the text generation process, such as adjusting the temperature, candidate count, or maximum output tokens.
+
+5. **Document loading**: Update the `document_loader.py` file to change the way documents are loaded, such as adding support for different file formats or implementing a different document storage system.
+
+6. **Embedding generation**: In the `embedding_gen.py` file, you can customize the embedding generation process, such as using a different model or modifying the way embeddings are stored and retrieved.
+
 
 ## Contributing
 Contributions to the Generative Markdown Genie app are welcome! If you find any bugs, have feature suggestions, or want to contribute improvements, please follow these steps:
