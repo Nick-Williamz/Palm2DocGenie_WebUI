@@ -11,25 +11,6 @@ Generative AI Document Genie is a Flask application built on top of Google's new
 
 ⚠️ Note: Running this application requires access to a Google Generative PaLM 2 API Key, which currently has a waiting list.
 
-## :key: Prerequisites
-
-Before you get started with Generative AI Document Genie, ensure you have the following:
-
-**Google Generative PaLM 2 API Key**: <br>
-   The Palm 2 API_KEYS at the time of writing still require getting on the waitlist which you can access [here](https://developers.generativeai.google/).
-
-**Enable the PaLM API in a new Google Cloud Console project**:<br>
-   After obtaining the API key, ensure to enable the PaLM API for your new project.
-
-**Create a new service account key in JSON format for the project**:<br>
-   This is a crucial step for the authentication of your project.
-
-**Download the JSON key file and save it securely**:<br>
-   This key will be required when setting up the application.
-
-**Conda environment (tested using Python 3.10.10)**:<br>
-   Ensure you have a Conda environment setup and ready to go.
-
 ## Features
 
 🌐 **Interactive Browser Window Interface:**  
@@ -57,6 +38,26 @@ Easy to navigate, our user interface ensures that you focus on generating conten
 - JavaScript (jQuery library)
 - Python (PaLM models)
 - Flask (Python web framework)
+
+
+## :key: Prerequisites
+
+Before you get started with Generative AI Document Genie, ensure you have the following:
+
+**Google Generative PaLM 2 API Key**: <br>
+   The Palm 2 API_KEYS at the time of writing still require getting on the waitlist which you can access [here](https://developers.generativeai.google/).
+
+**Enable the PaLM API in a new Google Cloud Console project**:<br>
+   After obtaining the API key, ensure to enable the PaLM API for your new project.
+
+**Create a new service account key in JSON format for the project**:<br>
+   This is a crucial step for the authentication of your project.
+
+**Download the JSON key file and save it securely**:<br>
+   This key will be required when setting up the application.
+
+**Conda environment (tested using Python 3.10.10)**:<br>
+   Ensure you have a Conda environment setup and ready to go.
 
 
 ## 🆕 Update (5/21/23) Improved Document Search and Output via ChromaDB 
