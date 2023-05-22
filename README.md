@@ -127,7 +127,8 @@ To customize the application, you can modify the following sections of the code:
 
 ### Useful Links :link:
 
-**Generative AI for Developers Waitlist**: https://developers.generativeai.google/
+**Generative AI for Developers Waitlist**: https://developers.generativeai.google/ <br>
+<br>
 **Generative AI for Developers Palm2 API Documeenation** : https://developers.generativeai.google/guide
 
 ## Contributing
