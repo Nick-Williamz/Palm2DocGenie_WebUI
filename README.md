@@ -61,7 +61,7 @@ Easy to navigate, our user interface ensures that you focus on generating conten
 
 ## ⚡ Update (5/21/23) Improved Document Search and Output via ChromaDB
 
-We have recently updated the embedding functionality in our application from using numpy to ChromaDB. This change has resulted in significant improvements in both query time and response quality. The following are the key benefits of this update:
+I've recently updated the embedding functionality in our application from using numpy to ChromaDB. This change has resulted in significant improvements in both query time and response quality. The following are the key benefits of this update:
 
 1. **Faster Query Time**: ChromaDB is designed for efficient nearest neighbor search, which allows us to find the most relevant passages more quickly compared to the previous numpy-based implementation. This results in a faster and more responsive user experience.
 
