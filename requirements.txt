@@ -3,3 +3,5 @@ numpy
 pandas
 google.generativeai
 scikit-learn
+flask_wtf
+wtforms
