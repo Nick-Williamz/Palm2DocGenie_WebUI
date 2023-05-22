@@ -1,4 +1,4 @@
-# Generative AI Document Genie :genie:
+# PaLM 2 Generative Text Genie :genie:
 
 Generative AI Document Genie is a Flask application designed to leverage the power of Google's new PaLM 2 generative AI API. This application serves as a powerful tool for interacting with and extracting information from your documents. It's perfect for anyone who needs to quickly find information within their documents, whether they're a student researching for a paper, a professional preparing a report, or a developer looking to understand a new codebase. 
 
