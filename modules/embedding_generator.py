@@ -29,6 +29,7 @@ def generate_embeddings_df(documents, text_model):
 
     # Retrieve the embeddings and metadata from the database
     embeddings_data = db.peek(len(documents))
+    
     # Create a DataFrame from the embeddings data
     df = pd.DataFrame(embeddings_data)
     df.columns = ['Text', 'Embeddings', 'Document_ID', 'Embedding_ID']
