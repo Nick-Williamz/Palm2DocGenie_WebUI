@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>AI Document Genie</title>
+    <style>
+        /* Add the following CSS */
+        #chat-output {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            border: 1px solid lightgray;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: rgb(30, 30, 30);
+            color: #F6F6F6;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            margin-top: 10px;
+            height: auto;
+        }
+
+        .user-message {
+            color: #27c93f;
+        }
+
+        .model-response {
+            color: #FBBD00;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container d-flex">
+            <a class="navbar-brand" href="/chat">🧞 PaLM2 Chat Genie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 d-flex justify-content-between">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Document Genie</a>
+                    </li>
+                    <div style="float: right;">
+                        <a href="https://github.com/Nick-Williamz/Palm-DocumentGenie-Webui" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1 class="title">PaLM 2 Chat Genie</h1>
+        <div class="title">
+            <img src="/static/img/document-genie.png" class="genie rounded" height="150px" width="150px"
+                alt="Document Genie" />
+        </div>
+        <p class="text-center small">Chat With Googles Largest LLMs</p>
+        <div class="d-flex" style="gap: 20px; height: 100%;">
+            <div class="chat-window-2">
+                <div class="mac-btns">
+                    <div class="mac-btn red"></div>
+                    <div class="mac-btn yellow"></div>
+                    <div class="mac-btn green"></div>
+                    <span class="ms-2">Chat Genie V 1.0</span>
+                </div>
+                <pre id="chat-output"></pre>
+                <div class="chat-input">
+                    <hr>
+                    <form id="chat-form" class="mt-4" onsubmit="submitChatForm(event)">
+                        {{ form.csrf_token }}
+                        <div class="form=group">
+                            <label for="message">Chat With Googles Largest LLMs:</label>
+                            <input type="text" id="message" name="message" class="form-control"
+                                placeholder="Ask a Question" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                            <button id="save-button" class="btn btn-secondary mt-3">Save Chat</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/static/main.js"></script>
+    <script>
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+</body>
+
+</html>
