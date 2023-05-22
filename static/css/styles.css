@@ -123,17 +123,19 @@ text-align: left;
     margin: 1rem 0;
 }
 #output {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     display: none;
     white-space: pre-wrap;
+    border: 1px solid lightgray;
     padding: 15px;
     border-radius: 5px;
-    background-color: black; /* Dark gray/blue */
-    color: whitesmoke; /* Light beige */
+    background-color: rgb(30,30,30);
+    color: #F6F6F6;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
     width: 100%;
+    margin-top: 10px;
     height: auto;
 }
 .text-center {
