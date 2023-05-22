@@ -4,8 +4,6 @@ Generative AI Document Genie is a Flask application built on top of Google's new
 
 ![Image showing working application running in browser](/static/img/PaLM2_Doc_Genie.png)
 
-:rocket: In its current version, the application harnesses the power of the Embedding API and the Generate Text functions which work together to let you upload documents and interact with them via one of Google's Generative Text models. Note that running this application requires access to a Google Generative PaLM 2 API Key, which currently has a waitlist. (Link in Step 1 below)
-
 ⚠️ Note: Running this application requires access to a Google Generative PaLM 2 API Key, which currently has a waiting list.
 
 ## :key: Prerequisites
