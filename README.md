@@ -59,7 +59,7 @@ Easy to navigate, our user interface ensures that you focus on generating conten
 - Flask (Python web framework)
 
 
-##⚡Update: Improved Embedding Functionality
+##⚡Update (5/21/23) Improved Document Search and Output via ChromaDB
 
 We have recently updated the embedding functionality in our application from using numpy to ChromaDB. This change has resulted in significant improvements in both query time and response quality. The following are the key benefits of this update:
 
