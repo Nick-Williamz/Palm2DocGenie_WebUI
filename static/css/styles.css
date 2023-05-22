@@ -7,6 +7,10 @@ body {
     color: whitesmoke;
 }
 
+h3.models {
+    text-align: left;
+    padding-top: 20px;
+}
 
 .container-fluid {
     flex: 1;
@@ -53,12 +57,24 @@ text-align: left;
     background-color: #252525;
     color: #fff;
     border: 1px solid lightgray;
-
     padding: 1rem;
     position: relative;
     border-radius: 5px;
     flex: 2;
     height: 550px;
+}
+
+.chat-window-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
+    color: #fff;
+    border: 1px solid lightgray;
+    padding: 1rem;
+    position: relative;
+    border-radius: 5px;
+    flex: 2;
+    height: 600px;
 }
 
 .document-view {
@@ -67,7 +83,6 @@ text-align: left;
     padding: 1rem;
     flex: 0 0 250px;
     border: 1px solid lightgray;
-
     height: 550px;
     margin-right: 30px;
 
@@ -122,6 +137,7 @@ text-align: left;
     border: 2px solid #ccc;
     margin: 1rem 0;
 }
+
 #output {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -138,6 +154,17 @@ text-align: left;
     margin-top: 10px;
     height: auto;
 }
+
+
+
+.user-message {
+    color: #27c93f;
+}
+.model-response {
+    color: #FBBD00;
+}
+
+
 .text-center {
     margin-top: 10px;
 }
