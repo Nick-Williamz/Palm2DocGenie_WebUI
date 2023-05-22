@@ -104,8 +104,11 @@ python webui_app.py
 
 3. Enter a query into the "Enter a Questions about your Document" field.
 4. Click the "Submit" button to generate the output based on your query.
-5. Once output has been generated, if not already created, the conversation.txt is created and the file will contain each of the queries and responses generated.
-6. To clear conversations.txt file simply tap the clear button in the browser!
+5. Once output has been generated, if not already created, the conversation.txt is created and the file will contain each of the queries and responses generated. 
+
+> **Note:** New queries will be appended to the converstations.txt file UNTIL the document is either manually cleared or the clear button in the browser is pressed.
+
+7. To clear conversations.txt file simply tap the clear button in the browser!
 
 ## Customization
 To customize the application, you can modify the following sections of the code:
