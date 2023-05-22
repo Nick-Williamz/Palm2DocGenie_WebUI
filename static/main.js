@@ -16,13 +16,12 @@ document.getElementById('topic-form').addEventListener('submit', function(event)
         if (data.error) {
             output.textContent = data.error;
         } else {
-            output.textContent = "Query: " + topic + "\nResponse: " + data.section;
+            output.innerHTML = '<span style="color: #27c93f; font-weight: bold;">Your Question:</span><br>' + topic + '<br><span style="color: #FBBD00; font-weight: bold;">Genie Says:</span><br>' + data.section + '<br><span style="color: red; font-weight: bold;">Cosine Similarity:</span><br>' + data.cosine_similarity.toFixed(2);
         }
         // Show the output div after getting the response
         output.style.display = 'block';
     });
 });
-
 document.getElementById('clear-document-btn').addEventListener('click', function(event) {
     event.preventDefault();
 
