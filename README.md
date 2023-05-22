@@ -98,15 +98,14 @@ python webui_app.py
 
 ## Usage
 
-### Pregame
 
-- Load your documents into the /documents folder (currently only accepting .txt files)
-- Once you've loaded the application and navigated to `127.0.0.1:5000` in the browser, you'll see the documents you've added to /documents in the Document View
 
-1. Enter a query into the "Enter a Questions about your Document" field.
-2. Click the "Submit" button to generate the output based on your query.
-3. Once output has been generated, if not already created, the converstaion.txt is created and the file will contain each of the queries and responses generated.
-4. To clear conversations.txt simply tap the clear button in the browser!
+1. Load your documents into the /documents folder (currently only accepting .txt files)
+2. Once you've loaded the application and navigated to `127.0.0.1:5000` in the browser, you'll see the documents you've added to /documents in the Document View
+3. Enter a query into the "Enter a Questions about your Document" field.
+4. Click the "Submit" button to generate the output based on your query.
+5. Once output has been generated, if not already created, the converstaion.txt is created and the file will contain each of the queries and responses generated.
+6. To clear conversations.txt simply tap the clear button in the browser!
 
 ## Customization
 To customize the application, you can modify the following sections of the code:
