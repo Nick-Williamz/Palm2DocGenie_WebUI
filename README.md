@@ -6,8 +6,8 @@ Generative AI Document Genie is a Flask application built on top of Google's new
 
 ### Useful Links :link:
 
-`Generative AI for Developers Waitlist`: https://developers.generativeai.google/ <br>
-`Generative AI for Developers Palm2 API Documeenation` : https://developers.generativeai.google/guide
+**Generative AI for Developers Waitlist**: https://developers.generativeai.google/
+**Generative AI for Developers Palm2 API Documeenation** : https://developers.generativeai.google/guide
 
 ⚠️ Note: Running this application requires access to a Google Generative PaLM 2 API Key, which currently has a waiting list.
 
@@ -15,19 +15,19 @@ Generative AI Document Genie is a Flask application built on top of Google's new
 
 Before you get started with Generative AI Document Genie, ensure you have the following:
 
-`Google Generative PaLM 2 API Key`:
+**Google Generative PaLM 2 API Key**:
    The Palm 2 API_KEYS at the time of writing still require getting on the waitlist which you can access [here](https://developers.generativeai.google/).
 
-`Enable the PaLM API in a new Google Cloud Console project`:
+**Enable the PaLM API in a new Google Cloud Console project**:
    After obtaining the API key, ensure to enable the PaLM API for your new project.
 
-`Create a new service account key in JSON format for the project`:
+**Create a new service account key in JSON format for the project**:
    This is a crucial step for the authentication of your project.
 
-`Download the JSON key file and save it securely`:
+**Download the JSON key file and save it securely**:
    This key will be required when setting up the application.
 
-`Conda environment (tested using Python 3.10.10)`:
+**Conda environment (tested using Python 3.10.10)**:
    Ensure you have a Conda environment setup and ready to go.
 
 ## Features
