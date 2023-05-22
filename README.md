@@ -4,10 +4,6 @@ Generative AI Document Genie is a Flask application built on top of Google's new
 
 ![Image showing working application running in browser](/static/img/PaLM2_Doc_Genie.png)
 
-### Useful Links :link:
-
-**Generative AI for Developers Waitlist**: https://developers.generativeai.google/
-**Generative AI for Developers Palm2 API Documeenation** : https://developers.generativeai.google/guide
 
 ⚠️ Note: Running this application requires access to a Google Generative PaLM 2 API Key, which currently has a waiting list.
 
@@ -127,6 +123,10 @@ To customize the application, you can modify the following sections of the code:
 
 6. **Embedding generation**: In the `embedding_gen.py` file, you can customize the embedding generation process, such as using a different model or modifying the way embeddings are stored and retrieved.
 
+### Useful Links :link:
+
+**Generative AI for Developers Waitlist**: https://developers.generativeai.google/
+**Generative AI for Developers Palm2 API Documeenation** : https://developers.generativeai.google/guide
 
 ## Contributing
 Contributions to the Generative Markdown Genie app are welcome! If you find any bugs, have feature suggestions, or want to contribute improvements, please follow these steps:
