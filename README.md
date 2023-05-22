@@ -126,4 +126,4 @@ To customize the application, you can modify the following sections of the code:
 Contributions to the Generative Markdown Genie app are welcome! If you find any bugs, have feature suggestions, or want to contribute improvements, please follow these steps:
 
 License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
