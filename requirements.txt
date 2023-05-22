@@ -2,3 +2,4 @@ flask
 numpy
 pandas
 google.generativeai
+scikit-learn
