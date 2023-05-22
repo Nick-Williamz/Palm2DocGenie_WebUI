@@ -97,7 +97,7 @@ python webui_app.py
 
 ## Usage
 
-1. Load your documents into the /documents folder (currently only accepting .txt files)
+1. Load your documents into the /documents folder. You can delete the example .txt files without issue. (currently only accepting .txt files)
 2. Once you've loaded the application and navigated to `127.0.0.1:5000` in the browser, you'll see the documents you've added to /documents in the Document View:
 
 ![Image showing document view during runtime](static/img/doc_view.png)
