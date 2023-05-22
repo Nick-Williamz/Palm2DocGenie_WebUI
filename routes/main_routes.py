@@ -5,14 +5,11 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 import google.generativeai as palm
-
+from modules.forms import ChatForm
 
 from modules import document_loader
 from modules import embedding_generator
 from modules import text_generator
-
-DOCUMENT_DIR = "./documents/"
-RESPONSE_FILENAME = 'conversation.txt'
 
 DOCUMENT_DIR = "./documents/"
 RESPONSE_FILENAME = 'conversation.txt'
@@ -91,12 +88,21 @@ def register_routes(app):
     @app.route('/get-models', methods=['GET'])
     def get_models():
         embedding_model_name = text_model.name if text_model else None
-        generation_model_name = text_model2.name if text_model2 else None
+        generation_model_name = text_model2.name if text_model2 else None        
         print(f"Embedding Model In Use: {embedding_model_name}")
         print(f"Text Generation Model In Use: {generation_model_name}")
         return jsonify({'embedding_model': embedding_model_name, 'generation_model': generation_model_name})
     
-
+    @app.route('/chat', methods=['GET', 'POST'])
+    def chat():
+        form = ChatForm()
+        if request.method == 'POST':
+            user_message = request.form['message']
+            response = palm.chat(messages=user_message)
+            model_response = response.last
+            return jsonify({'model_response': model_response})
+        return render_template('chat.html', form=form)
+    
     @app.route('/generate-section', methods=['POST'])
     def generate_section():
         topic = request.form['topic']
@@ -116,8 +122,8 @@ def register_routes(app):
 
         section = section.candidates[0]['output']
         with open(RESPONSE_FILENAME, 'a', encoding='utf-8') as response_file:
-            response_file.write(f"User Query: {topic}\n")  # Write the user's query to the file
-            response_file.write(f"Document Genie Says:\n{section}\n")  # Write the generated 
+                 response_file.write(f"User Query: {topic}\n")  # Write the user's query to the file
+                 response_file.write(f"Document Genie Says:\n{section}\n")  # Write the generated 
         return jsonify({'section': section, 'cosine_similarity': cosine_similarity})
 
 
