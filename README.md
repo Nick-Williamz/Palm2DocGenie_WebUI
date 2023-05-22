@@ -47,24 +47,6 @@ Before you get started with Generative AI Document Genie, ensure you have the fo
 
 - **Conda environment (tested using Python 3.10.10)**: Ensure you have a Conda environment setup and ready to go. If you're new to Conda, you can learn how to get started [here](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html).
 
-Before you get started with Generative AI Document Genie, ensure you have the following:
-
-**Google Generative PaLM 2 API Key**: <br>
-   The Palm 2 API_KEYS at the time of writing still require getting on the waitlist which you can access [here](https://developers.generativeai.google/).
-
-**Enable the PaLM API in a new Google Cloud Console project**:<br>
-   After obtaining the API key, ensure to enable the PaLM API for your new project.
-
-**Create a new service account key in JSON format for the project**:<br>
-   This is a crucial step for the authentication of your project.
-
-**Download the JSON key file and save it securely**:<br>
-   This key will be required when setting up the application.
-
-**Conda environment (tested using Python 3.10.10)**:<br>
-   Ensure you have a Conda environment setup and ready to go.
-
-
 ## 🆕 Update (5/21/23) Improved Document Search and Output via ChromaDB 
 
 I've recently updated the embedding functionality in our application from using numpy to ChromaDB. This change has resulted in significant improvements in both query time and response quality. The following are the key benefits of this update:
