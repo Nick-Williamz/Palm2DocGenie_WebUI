@@ -39,6 +39,16 @@ Easy to navigate, our user interface ensures that you focus on generating conten
 
 Before you get started with Generative AI Document Genie, ensure you have the following:
 
+- **Google Generative PaLM 2 API Key**: The Palm 2 API_KEYS at the time of writing still require getting on the waitlist which you can access [here](https://developers.generativeai.google/). 
+
+- **Enable the PaLM API in a new Google Cloud Console project**: After obtaining the API key, ensure to enable the PaLM API for your new project. You can learn how to enable APIs in your Google Cloud Console project [here](https://cloud.google.com/apis/docs/getting-started#enabling_apis).
+
+- **Create a new service account key in JSON format for the project**: This is a crucial step for the authentication of your project. You can create and download the JSON key file [here](https://console.cloud.google.com/iam-admin/serviceaccounts).
+
+- **Conda environment (tested using Python 3.10.10)**: Ensure you have a Conda environment setup and ready to go. If you're new to Conda, you can learn how to get started [here](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html).
+
+Before you get started with Generative AI Document Genie, ensure you have the following:
+
 **Google Generative PaLM 2 API Key**: <br>
    The Palm 2 API_KEYS at the time of writing still require getting on the waitlist which you can access [here](https://developers.generativeai.google/).
 
