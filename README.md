@@ -6,7 +6,7 @@ Generative AI Document Genie is a Flask application built on top of Google's new
 
 ### Useful Links :link:
 
-`Generative AI for Developers Waitlist`: https://developers.generativeai.google/
+`Generative AI for Developers Waitlist`: https://developers.generativeai.google/ <br>
 `Generative AI for Developers Palm2 API Documeenation` : https://developers.generativeai.google/guide
 
 ⚠️ Note: Running this application requires access to a Google Generative PaLM 2 API Key, which currently has a waiting list.
